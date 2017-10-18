@@ -1754,3 +1754,39 @@ body.is-loading #header.alt .inner {
         margin-bottom: 2em;
     }
 }
+nav {
+  top: 0;
+  margin: 0 auto;
+  max-width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 1em 1em;
+  position: relative;
+  transition: all .2s ease;
+
+  &:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #D32F2F;
+    transition: all .2s ease;
+  }
+
+  &:hover {
+    color: #D32F2F;
+  }
+
+  &:hover:before {
+    height: 100%;
+  }
+}
