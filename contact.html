@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>L'agence| Contact</title>
+	<link rel="icon" href="images/logo-web-lagence.png" type="image/png">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1>Contactez-nous</h1>
+		<section class="main">
+			<form method="post" action="javascript:submitContact();">
+				Nom:<br>
+				<input type="text" name="nom" id="nom" placeholder="Mickey">
+				<br> Adresse e-mail:<br>
+				<input type="email" name="email" id="email" placeholder="Mouse">
+				<br>Message:<br>
+				<textarea name="message" id="message" placeholder="Vous etes les meilleurs"></textarea>
+				<br><br>
+				<div style="text-align:center">
+					<input type="submit" id="submit" value="Envoyer">
+				</div>
+				</article>
+			</form>
+			<!--<script type="text/javascript">
+				var txt = document.getElementById("nom");
+				var txt2 = document.getElementById("email");
+				var txt3 = document.getElementById("message");
+				document.getElementById("submit").addEventListener("click", function(){alert(txt.value+txt2.value+txt3.value);});
+			</script>-->
+		</section>
+		<section class="main">
+			<article class="item">
+				<div id="map"></div>
+				<script>
+					function initMap() {
+						var uluru = {
+							lat: 36.838396,
+							lng: 10.179670
+						};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 18,
+							center: uluru
+						});
+						var contentString = '<div id="content">' +
+							'<div id="siteNotice">' +
+							'</div>' +
+							'<h3 id="firstHeading" class="firstHeading">L\'agence - Boîte à outils</h3>' +
+							'<div id="bodyContent">' +
+							'<b><p>Immeuble Balkis - Bloc FG - Appartement 2<br>' +
+							'1004 Menzah 1<br>' +
+							'Tunis - Tunisie<br>' +
+							'Tél : 71 750 086</p></b>' +
+							'</div>' +
+							'</div>';
+						var infowindow = new google.maps.InfoWindow({
+							content: contentString
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map,
+							title: 'L\'agence - Boîte à outils',
+							icon: 'http://i.imgur.com/83VTtsw.png'
+						});
+						marker.addListener('click', function() {
+							infowindow.open(map, marker);
+						});
+
+					}
+				</script>
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7uDLRKIMoCReqY35U_K4jvF19yjjtRVM&callback=initMap">
+				</script>
+			</article>
+		</section>
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Made with love by our IT lab rat. Email API: <a href="mailto:redcarpetsolutions2017@gmail.com">RedCarpetSolutions</a>.</p>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/emailapi.js"></script>
+
+	</div>
+</body>
+
+</html>
